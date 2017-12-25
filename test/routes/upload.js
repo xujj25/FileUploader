@@ -14,6 +14,7 @@ router.post('/', function(req, res) {
   form.uploadDir = 'public' + AVATAR_UPLOAD_FOLDER;     //设置上传目录
   form.keepExtensions = true;     //保留后缀
   form.maxFieldsSize = 2 * 1024 * 1024;   //文件大小
+  form.hash = false; // 取消哈希
 
   form.parse(req, function(err, fields, files) {
 
@@ -41,19 +42,23 @@ router.post('/', function(req, res) {
     }
 
     if(extName.length == 0){
+      fs.unlink(files.fulAvatar.path, function(err) {
+	if (err) throw err;
+	console.log("delete not image file");
+      })
       res.locals.error = '只支持png和jpg格式图片';
-      res.send('只支持png和jpg格式图片');
+      res.send('formatError');
       return;
     }
 
-    // var avatarName = Math.random() + '.' + extName;
+    var avatarName = files.fulAvatar.name;
     //图片写入地址；
-    // var newPath = form.uploadDir + avatarName;
+    var newPath = form.uploadDir + avatarName;
     //显示地址；
     // var showUrl = domain + AVATAR_UPLOAD_FOLDER + avatarName;
     // console.log("newPath",newPath);
-    // fs.renameSync(files.fulAvatar.path, newPath);  //重命名
-    res.send('/home/xujijun/testfile/fileUploadTest/test/' + files.fulAvatar.path);
+    fs.renameSync(files.fulAvatar.path, newPath);  //重命名
+    res.send("success");
   });
 });
 module.exports = router;
