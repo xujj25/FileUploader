@@ -1,6 +1,6 @@
 # FileUploader
 
-这是一个使用node.js和express框架搭建的轻量级HTTP服务器，供安卓客户端的上传和下载图片。
+这是一个使用node.js和express框架搭建的轻量级HTTP服务器，供安卓客户端上传和下载图片。
 
 # 操作指南
 
