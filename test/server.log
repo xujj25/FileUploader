@@ -1,0 +1,67 @@
+
+> application-name@0.0.1 start /home/xujijun/FileUploader/test
+> node ./bin/www
+
+{ fulAvatar: 
+   File {
+     domain: null,
+     _events: {},
+     _eventsCount: 0,
+     _maxListeners: undefined,
+     size: 1793785,
+     path: 'public/avatar/upload_5ebe5156dc8516dedb188cb27337dbd8.png',
+     name: 'lena.png',
+     type: 'image/png',
+     hash: null,
+     lastModifiedDate: 2017-12-24T07:59:58.270Z,
+     _writeStream: 
+      WriteStream {
+        _writableState: [Object],
+        writable: false,
+        domain: null,
+        _events: {},
+        _eventsCount: 0,
+        _maxListeners: undefined,
+        path: 'public/avatar/upload_5ebe5156dc8516dedb188cb27337dbd8.png',
+        fd: null,
+        flags: 'w',
+        mode: 438,
+        start: undefined,
+        autoClose: true,
+        pos: undefined,
+        bytesWritten: 1793785,
+        closed: true } } }
+newPath public/avatar/0.06350848734608516.png
+[90mPOST /uploader [32m200 [90m4078ms - 66b[0m
+{ fulAvatar: 
+   File {
+     domain: null,
+     _events: {},
+     _eventsCount: 0,
+     _maxListeners: undefined,
+     size: 7470579,
+     path: 'public/avatar/upload_3a64d1ac2c13516ead2d027b46998175.jpg',
+     name: 'jeremy-thomas-99326.jpg',
+     type: 'image/jpeg',
+     hash: null,
+     lastModifiedDate: 2017-12-24T08:07:28.232Z,
+     _writeStream: 
+      WriteStream {
+        _writableState: [Object],
+        writable: false,
+        domain: null,
+        _events: {},
+        _eventsCount: 0,
+        _maxListeners: undefined,
+        path: 'public/avatar/upload_3a64d1ac2c13516ead2d027b46998175.jpg',
+        fd: null,
+        flags: 'w',
+        mode: 438,
+        start: undefined,
+        autoClose: true,
+        pos: undefined,
+        bytesWritten: 7470579,
+        closed: true } } }
+newPath public/avatar/0.15602393598527287.jpg
+[90mPOST /uploader [32m200 [90m15963ms - 66b[0m
+[90mPOST /uploader [32m200 [90m95743ms - 215b[0m
