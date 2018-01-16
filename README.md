@@ -12,6 +12,6 @@ cd ./test  # 进入项目主目录
 
 npm install  # 加载依赖
 
-npm start  # 启动服务器，监听在3000端口
+npm start >> server.log # 以守护进程模式启动服务器，监听在3000端口，日志保存在server.log中
 
 ```
